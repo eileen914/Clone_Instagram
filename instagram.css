@@ -1,0 +1,264 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  border-bottom: 2px solid #d3d3d3;
+  padding-bottom: 10px;
+}
+
+.header .logo {
+  height: 100%; /* 30px */
+}
+
+.header .search {
+  padding: 3px;
+  border: 2px solid #d3d3d3;
+  border-radius: 2px;
+}
+
+.header .icon-list {
+  height: 100%; /* 30px */
+}
+
+.story-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-right: 20%;
+  padding-left: 20%;
+  height: 20%;
+}
+
+.story-container .story-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-container .story {
+  width: 40px;
+  height: 40px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.story-container .story-owner {
+  margin-top: 2px;
+  font-size: 8px;
+}
+
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
+/* 피드 부분 시작 */
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 10px auto;
+  border: 2px solid #d3d3d3;
+}
+
+/* profile-container 부분 시작 */
+.profile-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile {
+  width: 20%;
+  display: flex;
+}
+
+.profile-name {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.profile-image {
+  width: 20px;
+  border-radius: 10px;
+}
+
+.menu {
+  width: 20px;
+  height: 20px;
+  background-image: radial-gradient(circle, black 2px, transparent 2.1px);
+  background-size: 100% 33.33%;
+}
+/* profile-container 부분 끝 */
+
+#profile-modal {
+  display: none;
+  width: 325px;
+  height: 250px;
+}
+
+/* 이미지 부분 시작*/
+.article {
+  width: 100%;
+}
+/* 이미지 부분 시작*/
+
+/* button-container 부분 시작 */
+.button-container {
+  border-bottom: 2px solid #d3d3d3;
+  padding-top: 5px;
+}
+.feed-buttons {
+  width: 40px;
+  margin-left: 3px;
+}
+
+#like-count-text {
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+#red-heart {
+  display: none;
+}
+/* button-container 부분 끝 */
+
+/* comment container 부분 시작*/
+.comment-container {
+  padding: 5px 0px;
+  display: flex;
+  width: 100%;
+}
+
+.smile {
+  width: 30px;
+}
+
+.emoji-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.emoji-modal {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.emoji-modal.show {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.emoji-option {
+  font-size: 22px;
+  cursor: pointer;
+}
+.emoji-option:hover {
+  transform: scale(1.2);
+}
+
+.comment {
+  height: 25px;
+  border: none;
+  width: 80%;
+}
+
+.comment-button {
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  color: blue;
+  opacity: 50%;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: block;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
+/* comment container 부분 끝*/
+
+/* 피드 부분 끝*/
+
+.footer-message {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 15px;
+}
+
+/* 알림창 부분 시작 */
+.toast {
+  position: fixed;
+  top: 50px;
+  right: 30px;
+  padding: 12px 20px;
+  background-color: #ffebee;
+  color: #d32f2f;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* 알림창 부분 끝 */

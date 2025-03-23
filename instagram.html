@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./instagram.css" />
+    <title>Liongram</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <img class="logo" src="./images/logo.png" />
+        <input class="search" placeholder="검색" />
+        <img class="icon-list" src="./images/icon_list.png" />
+      </header>
+
+      <div class="content-container">
+        <div class="story-container">
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">내 스토리</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">jun._.haha_</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">jjang_jyo</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">hm_son7</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">jennierubyjane</div>
+          </div>
+        </div>
+
+        <div class="story-modal">
+          <img id="story-image" src="./images/profile.png" />
+        </div>
+
+        <section class="article-container">
+          <div class="profile-container">
+            <div class="profile">
+              <img class="profile-image" src="./images/profile.png" />
+              <span class="profile-name">likelion_snu</span>
+            </div>
+            <div class="menu"></div>
+          </div>
+
+          <div class="profile-modal">
+            <img id="profile-modal" src="./images/likelion_snu.png" />
+          </div>
+
+          <img class="article" src="./images/article.jpg" />
+          <div class="button-container">
+            <img
+              class="feed-buttons"
+              id="black-heart"
+              src="./images/feed_like_button.png"
+            />
+            <img
+              id="red-heart"
+              class="feed-buttons"
+              src="./images/red-heart.png"
+            />
+            <img class="feed-buttons" src="./images/feed_comment_button.png" />
+            <img class="feed-buttons" src="./images/feed_share_button.png" />
+
+            <div id="like-count-text">
+              <span>좋아요</span>
+              <span id="like-count">1003</span>
+            </div>
+          </div>
+          <form class="comments-create-form">
+            <div class="comment-container">
+              <div class="emoji-wrapper">
+                <button id="emoji-button" class="emoji-button">
+                  <img
+                    class="smile"
+                    src="./images/smile.png"
+                    alt="이모지 선택 버튼"
+                  />
+                </button>
+                <div id="emoji-modal" class="emoji-modal">
+                  <span class="emoji-option">😀</span
+                  ><span class="emoji-option">😍</span
+                  ><span class="emoji-option">🔥</span
+                  ><span class="emoji-option">😂</span>
+                </div>
+              </div>
+              <input class="comment" placeholder="댓글 달기..." />
+              <button class="comment-button">게시</button>
+            </div>
+          </form>
+          <div class="written-comments-container"></div>
+        </section>
+
+        <footer>
+          <p class="footer-message">Ⓒ2025 LIONGRAM</p>
+        </footer>
+      </div>
+    </main>
+
+    <div id="like-toast" class="toast">
+      jun._.haha_님이 회원님의 게시물을 좋아합니다.
+    </div>
+
+    <script src="./instagram.js"></script>
+  </body>
+</html>
